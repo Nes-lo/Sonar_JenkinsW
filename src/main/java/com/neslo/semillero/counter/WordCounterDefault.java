@@ -2,12 +2,12 @@ package com.neslo.semillero.counter;
 
 import com.neslo.semillero.model.Summary;
 
-import java.io.File;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.SplittableRandom;
+
 import java.util.stream.Stream;
 
 public class WordCounterDefault implements WordCounter{
