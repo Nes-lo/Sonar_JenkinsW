@@ -12,7 +12,7 @@ import java.util.stream.Stream;
 
 public class WordCounterDefault implements WordCounter{
     @Override
-    public Summary procecc(String pathFile) throws IOException {
+    public Summary process(String pathFile) throws IOException {
 
         Path path = Paths.get(pathFile);
         long numberOfLines = getNumberOfLines(path);
