@@ -20,7 +20,7 @@ class WordCounterDefaultTest {
        Summary summary=wordCounter.process(absolutePath+ File.separator + "test.txt");
 
        Assertions.assertEquals(2,summary.getNumberOfLines());
-       Assertions.assertEquals(23,summary.getNumberOfWord());
+       Assertions.assertEquals(5,summary.getNumberOfWord());
 
     }
 
