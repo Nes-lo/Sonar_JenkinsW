@@ -5,5 +5,5 @@ import com.neslo.semillero.model.Summary;
 import java.io.IOException;
 
 public interface WordCounter {
-    Summary procecc(String path) throws IOException;
+    Summary process(String pathFile) throws IOException;
 }
