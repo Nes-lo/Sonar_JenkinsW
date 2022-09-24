@@ -3,12 +3,12 @@ pipeline{
 
     stages{
 
-       stage('gradlew clean')
+    /*   stage('gradlew clean')
        {
           steps{
           bat "clean"
            }
-        }
+        }*/
 
        stage('build'){
           steps{
