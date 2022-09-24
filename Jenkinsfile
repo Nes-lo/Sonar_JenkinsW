@@ -6,32 +6,32 @@ pipeline{
        stage('gradlew clean')
        {
           steps{
-          sh "clean"
+          bat "clean"
            }
         }
 
        stage('build'){
           steps{
-          sh "gradlew build -x test"
+          bat "gradlew build -x test"
           }
        }
 
        stage('test'){
                  steps{
-                 sh "gradlew test"
+                 bat "gradlew test"
                  }
          }
 
          stage('cobertura'){
                    steps{
-                   sh "jacocoTestReport"
+                   bat "jacocoTestReport"
                    }
                 }
 
 
        stage('sonar'){
                    steps{
-                   sh "gradlew sonarqube"
+                   bat "gradlew sonarqube"
                    }
            }
     }
