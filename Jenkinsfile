@@ -22,12 +22,12 @@ pipeline{
                  }
          }
 
-         stage('cobertura'){
+       /*  stage('cobertura'){
                    steps{
                    bat "jacocoTestReport"
                    }
                 }
-
+*/
 
        stage('sonar'){
                    steps{
