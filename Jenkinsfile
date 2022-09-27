@@ -22,18 +22,20 @@ pipeline{
                  }
          }
 
-       /*  stage('cobertura'){
+       stage('cobertura'){
                    steps{
-                   bat "jacocoTestReport"
+                   bat "gradlew jacocoTestReport"
                    }
                 }
-*/
+
 
     stage('SonarQube analysis') {
            //withSonarQubeEnv() { // Will pick the global server connection you have configured
-           steps{
-             bat "./gradlew sonarqube"
-           }
+                 steps {
+                   withSonarQubeEnv('SonarCloud'){
+                    bat 'gradlew sonarqube'
+                   }
+                 }
          }
     }
 }
