@@ -6,7 +6,7 @@ pipeline{
     stage('gradlew clean')
        {
           steps{
-          bat "cls"
+          bat "gradlew clean"
            }
         }
 
@@ -33,7 +33,7 @@ pipeline{
            //withSonarQubeEnv() { // Will pick the global server connection you have configured
                  steps {
                    withSonarQubeEnv('SonarCloud'){
-                    bat "gradlew sonarqube" // -Dsonar.branch.targe=${BRANCH_NAME} -Dsonar.branch.name=${BRANCH_NAME}"
+                    bat "gradlew sonarqube -Dsonar.branch.name=${BRANCH_NAME}" // -Dsonar.branch.targe=${BRANCH_NAME}
                    }
                  }
          }
